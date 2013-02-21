@@ -15,6 +15,8 @@
 
 @property (assign) IBOutlet NSWindow *window;
 @property (weak) IBOutlet NSTextField *textField;
+@property (weak) IBOutlet NSButton *stopButton;
+@property (weak) IBOutlet NSButton *speakButton;
 
 - (IBAction)stopIt:(id)sender;
 - (IBAction)speakIt:(id)sender;
