@@ -151,6 +151,11 @@
 													<bool key="NSIsResizeable">YES</bool>
 													<bool key="NSIsEditable">YES</bool>
 													<reference key="NSTableView" ref="506762714"/>
+													<object class="NSSortDescriptor" key="NSSortDescriptorPrototype">
+														<string key="NSKey">personName</string>
+														<bool key="NSAscending">YES</bool>
+														<string key="NSSelector">caseInsensitiveCompare:</string>
+													</object>
 												</object>
 												<object class="NSTableColumn" id="406998226">
 													<double key="NSWidth">187</double>
@@ -169,7 +174,7 @@
 														<int key="NSCellFlags2">-2147481600</int>
 														<string key="NSContents">Text Cell</string>
 														<reference key="NSSupport" ref="699020567"/>
-														<object class="NSNumberFormatter" key="NSFormatter" id="902241613">
+														<object class="NSNumberFormatter" key="NSFormatter" id="83889649">
 															<dictionary class="NSMutableDictionary" key="NS.attributes">
 																<boolean value="YES" key="allowsFloats"/>
 																<integer value="1040" key="formatterBehavior"/>
@@ -194,7 +199,7 @@
 																<string key="NSString">NaN</string>
 																<dictionary key="NSAttributes"/>
 															</object>
-															<object class="NSDecimalNumberPlaceholder" key="NS.min" id="344016377">
+															<object class="NSDecimalNumberPlaceholder" key="NS.min" id="626372454">
 																<int key="NS.exponent">0</int>
 																<int key="NS.length">0</int>
 																<bool key="NS.negative">YES</bool>
@@ -202,7 +207,7 @@
 																<int key="NS.mantissa.bo">1</int>
 																<bytes key="NS.mantissa">AAAAAAAAAAAAAAAAAAAAAA</bytes>
 															</object>
-															<reference key="NS.max" ref="344016377"/>
+															<reference key="NS.max" ref="626372454"/>
 															<object class="NSDecimalNumberHandler" key="NS.rounding">
 																<int key="NS.roundingmode">3</int>
 																<bool key="NS.raise.overflow">YES</bool>
@@ -746,7 +751,7 @@
 						<int key="objectID">100034</int>
 						<reference key="object" ref="122146872"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="902241613"/>
+							<reference ref="83889649"/>
 						</array>
 						<reference key="parent" ref="406998226"/>
 					</object>
@@ -859,7 +864,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">100066</int>
-						<reference key="object" ref="902241613"/>
+						<reference key="object" ref="83889649"/>
 						<reference key="parent" ref="122146872"/>
 					</object>
 				</array>
