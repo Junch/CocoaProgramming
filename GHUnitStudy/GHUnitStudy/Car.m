@@ -56,6 +56,15 @@
     return desc;
 } //description
 
+-(id) copyWithZone:(NSZone *)zone
+{
+    Tire *tireCopy;
+    tireCopy = [[[self class] allocWithZone:zone]
+                initWithPressure:pressure
+                treadDepth:treadDepth];
+    return tireCopy;
+} // copyWithZone
+
 @end // Tire
 
 @implementation AllWeatherRadial
@@ -73,7 +82,6 @@
     }
     
     return (self);
-    
 } // initWithPressure:treadDepth
 
 - (NSString *) description
@@ -87,8 +95,18 @@
             [self snowHandling]];
     
     return (desc);
-    
 } // description
+
+-(id) copyWithZone:(NSZone *)zone
+{
+    AllWeatherRadial* tireCopy;
+    tireCopy = [super copyWithZone:zone];
+    
+    tireCopy.rainHandling = rainHandling;
+    tireCopy.snowHandling = snowHandling;
+    
+    return tireCopy;
+} // copyWithZone
 
 @end // AllWeatherRadial
 
@@ -99,6 +117,13 @@
 {
     return(@"I am an engine. Vrooom!");
 } // description
+
+-(id) copyWithZone:(NSZone *)zone
+{
+    Engine *engineCopy;
+    engineCopy= [[[self class] allocWithZone:zone] init];
+    return engineCopy;
+}
 @end
 
 @implementation Slant6
@@ -160,5 +185,20 @@
     
     return desc;
 } // description
+
+-(id)copyWithZone:(NSZone *)zone
+{
+    Car * carCopy;
+    carCopy = [[[self class] allocWithZone: zone] init];
+    carCopy.name = name;
+    
+    carCopy.engine = [[engine copy] autorelease];
+    for (int i=0; i<4; i++) {
+        Tire* tireCopy = [[[self tireAtIndex:i] copy] autorelease];
+        [carCopy setTire:tireCopy atIndex:i];
+    }
+    
+    return carCopy;
+}
 
 @end

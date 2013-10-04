@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Tire : NSObject
+@interface Tire : NSObject <NSCopying>
 
 @property float pressure;
 @property float treadDepth;
@@ -28,13 +28,13 @@
 
 ///////////////////////////////////////////////////
 
-@interface Engine : NSObject
+@interface Engine : NSObject <NSCopying>
 @end // Engine
 
 @interface Slant6: Engine
 @end // Slant6
 
-@interface Car : NSObject {
+@interface Car : NSObject <NSCopying> {
     NSMutableArray *tires;
 }
 

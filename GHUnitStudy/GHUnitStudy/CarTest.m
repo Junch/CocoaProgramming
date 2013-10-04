@@ -35,6 +35,10 @@
         [engine release];
         
         GHTestLog(@"%@", car);
+        
+        Car* carCopy= [car copy];
+        carCopy.name = @"Benz";
+        GHTestLog(@"%@", carCopy);
     }
 }
 
