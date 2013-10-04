@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E29347017FE9C4C0052D336 /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E29346F17FE9C4C0052D336 /* Car.m */; };
+		8E29347317FEA7B90052D336 /* CarTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E29347217FEA7B90052D336 /* CarTest.m */; };
+		8E29347617FEACFF0052D336 /* CategoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E29347517FEACFF0052D336 /* CategoryTest.m */; };
+		8E98605117FD939000BB740A /* MemoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E98605017FD939000BB740A /* MemoryTest.m */; };
+		8E98605717FD9E8D00BB740A /* LogObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E98605617FD9E8D00BB740A /* LogObject.m */; };
 		8EDD95D217F6B9E300C7D320 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EDD95D117F6B9E300C7D320 /* Cocoa.framework */; };
 		8EDD95DE17F6B9E300C7D320 /* GHUnitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDD95DD17F6B9E300C7D320 /* GHUnitTestMain.m */; };
 		8EDD95F117F6C47700C7D320 /* GHUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EDD95F017F6C47700C7D320 /* GHUnit.framework */; };
@@ -28,6 +33,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8E29346E17FE9C4C0052D336 /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
+		8E29346F17FE9C4C0052D336 /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
+		8E29347217FEA7B90052D336 /* CarTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarTest.m; sourceTree = "<group>"; };
+		8E29347517FEACFF0052D336 /* CategoryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTest.m; sourceTree = "<group>"; };
+		8E98605017FD939000BB740A /* MemoryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryTest.m; sourceTree = "<group>"; };
+		8E98605517FD9E8D00BB740A /* LogObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogObject.h; sourceTree = "<group>"; };
+		8E98605617FD9E8D00BB740A /* LogObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogObject.m; sourceTree = "<group>"; };
 		8EDD95CE17F6B9E300C7D320 /* GHUnitStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHUnitStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EDD95D117F6B9E300C7D320 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		8EDD95D417F6B9E300C7D320 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -95,6 +107,13 @@
 			children = (
 				8EDD95D817F6B9E300C7D320 /* Supporting Files */,
 				8EDD95F517F6CF4400C7D320 /* SimpleTest.m */,
+				8E98605017FD939000BB740A /* MemoryTest.m */,
+				8E98605517FD9E8D00BB740A /* LogObject.h */,
+				8E98605617FD9E8D00BB740A /* LogObject.m */,
+				8E29346E17FE9C4C0052D336 /* Car.h */,
+				8E29346F17FE9C4C0052D336 /* Car.m */,
+				8E29347217FEA7B90052D336 /* CarTest.m */,
+				8E29347517FEACFF0052D336 /* CategoryTest.m */,
 			);
 			path = GHUnitStudy;
 			sourceTree = "<group>";
@@ -174,6 +193,11 @@
 			files = (
 				8EDD95DE17F6B9E300C7D320 /* GHUnitTestMain.m in Sources */,
 				8EDD95F617F6CF4400C7D320 /* SimpleTest.m in Sources */,
+				8E98605117FD939000BB740A /* MemoryTest.m in Sources */,
+				8E98605717FD9E8D00BB740A /* LogObject.m in Sources */,
+				8E29347017FE9C4C0052D336 /* Car.m in Sources */,
+				8E29347317FEA7B90052D336 /* CarTest.m in Sources */,
+				8E29347617FEACFF0052D336 /* CategoryTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +316,7 @@
 				8EDD95ED17F6B9E400C7D320 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
