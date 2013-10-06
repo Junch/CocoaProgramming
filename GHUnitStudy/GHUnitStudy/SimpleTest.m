@@ -84,4 +84,25 @@
     }];
 }
 
+-(void) testException
+{
+    NSArray *crew = [NSArray arrayWithObjects:
+                      @"Dave",
+                      @"Heywood",
+                      @"Frank", nil];
+    
+    @try {
+        GHTestLog(@"%@", [crew objectAtIndex:10]);
+    }
+    @catch (NSException *exception) {
+        GHTestLog(@"Caught an exception!\n"
+                  "Name: %@\n"
+                  "Reason: %@",[exception name], exception);
+    }
+    @finally {
+        GHTestLog(@"Cleaning up");
+    }
+}
+
+
 @end

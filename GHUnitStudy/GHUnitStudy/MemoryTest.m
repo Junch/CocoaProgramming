@@ -23,7 +23,7 @@
 -(id) init
 {
     if (self = [super init])
-        GHTestLog(@"init: Retain count of %ld.", [self retainCount]);
+        GHTestLog(@"init: Retain count of %lu.", [self retainCount]);
     
     return self;
 }
@@ -53,9 +53,9 @@
 {
     RetainTracker *tracker=[[RetainTracker alloc] init];
     [tracker retain];
-    GHTestLog(@"%ld", (unsigned long)[tracker retainCount]);
+    GHTestLog(@"%lu", [tracker retainCount]);
     [tracker release];
-    GHTestLog(@"%ld", (unsigned long)[tracker retainCount]);
+    GHTestLog(@"%lu", [tracker retainCount]);
     [tracker release];
 }
 
