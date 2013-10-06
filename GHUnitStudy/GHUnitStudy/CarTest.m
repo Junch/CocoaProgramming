@@ -42,5 +42,12 @@
     }
 }
 
+-(void)testConformsToProtocol
+{
+    Car *car = [Car new];
+    if ([car conformsToProtocol:@protocol(NSCopying)])
+        GHTestLog(@"car conforms to protocol NSCopying");
+    [car release];
+}
 
 @end

@@ -81,4 +81,18 @@
     }
 }
 
+-(void)testUsingFactories
+{
+    NSMutableArray* array=[NSMutableArray array]; // nice,simple,autoreleased
+    
+    NSMutableArray* array2=[[NSMutableArray alloc] init];
+    // do stuff with array and array2
+    
+    [array2 release];//Need to release this one
+    
+    // [array release]; no need to release this,
+    // it's already autoreleased
+    // if you release it here, it will cause a crash
+}
+
 @end

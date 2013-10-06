@@ -156,8 +156,8 @@
 -(void) dealloc
 {
     self.name = nil;
-    [tires release];
-    [engine release];
+    [tires release]; tires = nil;
+    [engine release]; engine = nil;
     
     [super dealloc];
 } // dealloc
