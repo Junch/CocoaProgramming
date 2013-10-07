@@ -50,4 +50,51 @@
     [car release];
 }
 
+-(void)testProperties
+{
+    GHTestLog(@"Property Attributes\n");
+    
+    GHTestLog(@"1.getter=<name>, setter=<name>");
+    GHTestLog(@"Specifies the name of the accessor methods that will be used for this property.\n");
+    
+    GHTestLog(@"2.readwrite or readonly");
+    GHTestLog(@"Specifies whether this property will be able to be written to. Default is readwrite.\n");
+    
+    GHTestLog(@"3.assign, retain or copy");
+    GHTestLog(@"Assign generates a setter with a plain assign to the varible. The default is assign.");
+    GHTestLog(@"Retain generates a setter which retains the argument passed "
+              "to it while assigning it to the variable.");
+    GHTestLog(@"Copy generates an an accessor which copies the passed in value to the member variable.\n");
+    
+    GHTestLog(@"4.nonatomic");
+    GHTestLog(@"Specifies that the generated accessor will be nonatomic, and therefore "
+               "not threadsafe. The default value is atomic, or threadsafe.");
+}
+
+-(void)testProperties_ACopyStyleSetter
+{
+    GHTestLog(@"-(void)setFirstName:(NSString *)inValue");
+    GHTestLog(@"{");
+    GHTestLog(@"    [firstName autorelease];");
+    GHTestLog(@"    firstName = [inValue copy];");
+    GHTestLog(@"}");
+}
+
+-(void)testProperties_ARetainStyleSetter
+{
+    GHTestLog(@"-(void)setFirstName:(NSString *)inValue");
+    GHTestLog(@"{");
+    GHTestLog(@"    [firstName autorelease];");
+    GHTestLog(@"    firstName = [inValue retain];");
+    GHTestLog(@"}");
+    
+    GHTestLog(@"\n");
+    GHTestLog(@"-(void)setFirstName:(NSString *)inValue");
+    GHTestLog(@"{");
+    GHTestLog(@"    [inValue retain];");
+    GHTestLog(@"    [firstName release];");
+    GHTestLog(@"    firstName = inValue;");
+    GHTestLog(@"}");
+}
+
 @end
