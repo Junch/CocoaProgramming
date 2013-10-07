@@ -12,9 +12,9 @@
 
 @implementation BlockTest
 
--(void)testaSimpleBlock
+-(void)testBlock1
 {
-    void (^myBlock)(NSString *x);
+    void (^myBlock)(NSString *);
     myBlock = ^(NSString * x)
     {
         GHTestLog(@"%@", x);
@@ -23,9 +23,9 @@
     myBlock(@"Hello World!");
 }
 
--(void)testaSimpleBlock2
+-(void)testBlock2
 {
-    BOOL (^myBlock)(NSString *x);
+    BOOL (^myBlock)(NSString *);
     myBlock = ^(NSString * x)
     {
         GHTestLog(@"%@", x);
@@ -33,6 +33,33 @@
     };
     
     myBlock(@"Hello World!");
+}
+
+-(void)testBlock3
+{
+    int foo = 10;
+    void (^printFoo)(void) =
+    ^(void){
+        GHTestLog(@"foo = %i", foo);
+        //foo = 20; //** THIS LINE GENERATES A COMPILER ERROR
+    };
+    
+    foo = 15;
+    printFoo();
+}
+
+-(void)testBlock4
+{
+    __block int foo = 10;
+    void (^printFoo)(void) =
+    ^(void){
+        GHTestLog(@"foo = %i", foo);
+        foo = 20;
+    };
+    
+    foo = 15;
+    printFoo();
+    GHTestLog(@"foo = %i", foo);
 }
 
 -(NSMutableArray *) filterArray:(NSArray *)inArray
@@ -53,7 +80,7 @@
     NSArray *array = [NSArray arrayWithObjects:@-2, @-1, @0, @1, @2, nil];
     GHTestLog(@"%@", array);
     
-    BOOL (^block)(NSInteger v);
+    BOOL (^block)(NSInteger);
     block = ^(NSInteger v)
     {
         if (v < 0)

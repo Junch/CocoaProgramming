@@ -82,6 +82,9 @@
     [array enumerateObjectsUsingBlock: ^(NSString *string, NSUInteger index, BOOL *stop) {
         GHTestLog(@"I found %@", string); 
     }];
+    
+    NSString* item = [array lastObject];
+    GHTestLog(@"%lu", [array indexOfObject: item]);
 }
 
 -(void) testException
@@ -104,5 +107,26 @@
     }
 }
 
+-(void) testEnumerating
+{
+    NSMutableArray *array = [NSMutableArray arrayWithObjects:@"foo", @"bar", @"baz", nil];
+    
+    NSEnumerator *enumerator = [array objectEnumerator];
+    NSString *item = nil;
+    
+    while (item = [enumerator nextObject])
+        GHTestLog(@"%@", item);
+    GHTestLog(@"");
+    
+    enumerator = [array objectEnumerator];
+    for (item in enumerator)
+        GHTestLog(@"%@", item);
+    GHTestLog(@"");
+    
+    enumerator = [array reverseObjectEnumerator];
+    while (item = [enumerator nextObject])
+        GHTestLog(@"%@", item);
+    GHTestLog(@"");
+}
 
 @end
