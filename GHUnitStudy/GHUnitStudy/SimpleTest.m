@@ -87,6 +87,39 @@
     GHTestLog(@"%lu", [array indexOfObject: item]);
 }
 
+- (void)testNSArrayInit
+{
+    NSArray *array = @[@1, @2, @3, @4, @5];
+    for (NSValue *i in array)
+        GHTestLog(@"value is %@", i);
+
+    NSValue* itemAt3 = array[3];
+    GHTestLog(@"itemAt3 is %@", itemAt3);
+}
+
+- (void)testNSDictionary
+{
+    // New way
+    NSDictionary* dict = @{@"key1":@1, @"key2":@2,@"key3":@3};
+    NSNumber* a = dict[@"key1"];
+    GHTestLog(@"a=%@", a);
+    
+    // Old way
+    dict = [NSDictionary dictionaryWithObjects:@[@3, @4, @5]
+                                       forKeys:@[@"key1", @"key2", @"key3"]];
+    GHTestLog(@"a=%@", dict[@"key2"]);
+}
+
+- (void)testNSNumber
+{
+    NSNumber* number;
+    number = [NSNumber numberWithInt: 12345]; GHTestLog(@"Number=%@", number);
+    number = [NSNumber numberWithBool: YES]; GHTestLog(@"Number=%@", number);
+    
+    number = @34567; GHTestLog(@"Number=%@", number);
+    number = @NO; GHTestLog(@"Number=%@", number);
+}
+
 -(void) testException
 {
     NSArray *crew = [NSArray arrayWithObjects:

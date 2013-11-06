@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E0E2C8D181F5C2F001F4478 /* NSURLConnectionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0E2C8C181F5C2F001F4478 /* NSURLConnectionTest.m */; };
+		8E0E2C8F181F5E76001F4478 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E0E2C8E181F5E76001F4478 /* CFNetwork.framework */; };
 		8E29347017FE9C4C0052D336 /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E29346F17FE9C4C0052D336 /* Car.m */; };
 		8E29347317FEA7B90052D336 /* CarTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E29347217FEA7B90052D336 /* CarTest.m */; };
 		8E29347617FEACFF0052D336 /* CategoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E29347517FEACFF0052D336 /* CategoryTest.m */; };
@@ -36,6 +38,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8E0E2C8C181F5C2F001F4478 /* NSURLConnectionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSURLConnectionTest.m; sourceTree = "<group>"; };
+		8E0E2C8E181F5E76001F4478 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		8E29346E17FE9C4C0052D336 /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
 		8E29346F17FE9C4C0052D336 /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
 		8E29347217FEA7B90052D336 /* CarTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarTest.m; sourceTree = "<group>"; };
@@ -64,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E0E2C8F181F5E76001F4478 /* CFNetwork.framework in Frameworks */,
 				8EDD95D217F6B9E300C7D320 /* Cocoa.framework in Frameworks */,
 				8EDD95F117F6C47700C7D320 /* GHUnit.framework in Frameworks */,
 			);
@@ -92,6 +97,7 @@
 		8EDD95D017F6B9E300C7D320 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8E0E2C8E181F5E76001F4478 /* CFNetwork.framework */,
 				8EDD95F017F6C47700C7D320 /* GHUnit.framework */,
 				8EDD95D117F6B9E300C7D320 /* Cocoa.framework */,
 				8EDD95D317F6B9E300C7D320 /* Other Frameworks */,
@@ -125,6 +131,7 @@
 				8E31432E1802E083008E6C27 /* KVCTest.h */,
 				8E31432F1802E083008E6C27 /* KVCTest.m */,
 				8EAF1D95181908870022F2E7 /* CppTest.mm */,
+				8E0E2C8C181F5C2F001F4478 /* NSURLConnectionTest.m */,
 			);
 			path = GHUnitStudy;
 			sourceTree = "<group>";
@@ -203,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EDD95DE17F6B9E300C7D320 /* GHUnitTestMain.m in Sources */,
+				8E0E2C8D181F5C2F001F4478 /* NSURLConnectionTest.m in Sources */,
 				8E6A2B6E1801A35A0090949E /* BlockTest.m in Sources */,
 				8E3143301802E083008E6C27 /* KVCTest.m in Sources */,
 				8EDD95F617F6CF4400C7D320 /* SimpleTest.m in Sources */,
